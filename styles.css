@@ -7,6 +7,9 @@
     --white: #FFFFFF;
     --gray: #7F8C8D;
     --border: #BDC3C7;
+    
+    --light-bg: var(--white);
+    --border: var(--white);
 }
 
 * {
@@ -25,23 +28,53 @@ body {
 
 header {
     text-align: center;
-    padding: 4rem 2rem;
-    background: var(--white);
+    padding: 6rem 2rem;
+    background-image: url('placeholder.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     border-bottom: 1px solid var(--border);
+    position: relative;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: calc(900px - 4rem);
+    height: 250px;
+    background: rgba(255, 255, 255, 0.7);
+    z-index: 1;
+}
+
+header h1,
+header p {
+    position: relative;
+    z-index: 2;
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: var(--primary);
     margin-bottom: 0.5rem;
     font-weight: 300;
     letter-spacing: 1px;
+    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
 }
 
 header p {
     font-size: 1.5rem;
     color: var(--secondary);
     font-weight: 300;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
 }
 
 main {
@@ -61,16 +94,39 @@ section {
 section h2 {
     font-size: 1.8rem;
     color: var(--primary);
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     text-align: center;
     font-weight: 300;
-    letter-spacing: 0.5px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 1px;
+    background-color: var(--accent);
 }
 
 section p {
     margin-bottom: 1rem;
     font-size: 1rem;
     color: var(--secondary);
+}
+
+.center {
+    text-align: center;
+}
+
+.small {
+    font-size: 0.85rem;
+    color: var(--gray);
 }
 
 a {
@@ -92,14 +148,7 @@ footer {
 
 /* Responsive design */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
-    
-    header p {
-        font-size: 1.2rem;
-    }
-    
+
     section {
         padding: 1.5rem;
     }
