@@ -135,6 +135,21 @@ footer {
   margin-bottom: 1rem;
 }
 
+#rsvp .rsvp-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+#rsvp .rsvp-link {
+    display: block;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    background-color: var(--accent);
+    color: var(--white);
+}
+
 @media (max-width: 1200px) {
   header {
     background-position: top center;
