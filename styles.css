@@ -150,6 +150,13 @@ footer {
     color: var(--white);
 }
 
+.tenor-gif-embed {
+    max-width: 240px;    
+    text-align: center;
+    margin: auto;
+    margin-bottom: 32px
+}
+
 @media (max-width: 1200px) {
   header {
     background-position: top center;
