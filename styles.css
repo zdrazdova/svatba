@@ -133,6 +133,7 @@ footer {
   margin-left: 50%;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  max-width: 900px;
 }
 
 #rsvp .rsvp-wrapper {
